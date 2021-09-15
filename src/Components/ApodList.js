@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import ApodCard from "./ApodCard";
+import ApodCard from "../Components/ApodCard";
 
 function RoverList() {
   const [apodList, setApodList] = useState([]);
@@ -25,8 +25,7 @@ function RoverList() {
   });
 
   return (
-    <div>
-      <h2>APOD Images of Last Week</h2>
+    <div className="apod-list">
       <div>{apoddata}</div>
     </div>
   );

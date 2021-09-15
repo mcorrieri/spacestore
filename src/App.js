@@ -1,7 +1,7 @@
 import React from "react";
 import "./App.css";
-import Header from "./Header";
-import ApodList from "./ApodList";
+import Header from "./Components/Header";
+import ApodList from "./Components/ApodList";
 
 function App() {
   return (

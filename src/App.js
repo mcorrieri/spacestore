@@ -1,13 +1,13 @@
 import React from "react";
 import "./App.css";
 import Header from "./Header";
-import RoverList from "./RoverList";
+import ApodList from "./ApodList";
 
 function App() {
   return (
     <div className="App">
       <Header />
-      <RoverList />
+      <ApodList />
     </div>
   );
 }

@@ -1,22 +1,28 @@
 import React, { useState } from "react";
-import { FaRegHeart } from "react-icons/fa";
+import Heart from "react-heart";
 
 function ApodCard({ apod }) {
-  const [color, setColor] = useState(null);
-
-  function handleClick() {
-    setColor(!color);
-  }
+  const { title, date, url, explanation } = apod;
+  const [click, setClick] = useState(false);
 
   return (
     <div className="apod-card">
       <div className="apod-info">
-        <h2>{apod.title}: </h2>
-        <h2>{apod.date}</h2>
+        <h2>
+          {title}: {date}{" "}
+        </h2>
       </div>
-      <img className="apod-img" src={apod.url} alt="apod" />
-      <p className="apod-desc">{apod.explanation}</p>
-      <FaRegHeart className="heart" style={{ color }} onClick={handleClick} />
+      <img className="apod-img" src={url} alt="apod" />
+      <p className="apod-desc">{explanation}</p>
+      <Heart
+        click={click}
+        onClick={() => setClick(!click)}
+        className="heart"
+        // animationTrigger="both"
+        // inactiveColor="rgba(255,125,125,.75)"
+        // activeColor="#e019ae"
+        // animationDuration={0.1}
+      />
     </div>
   );
 }

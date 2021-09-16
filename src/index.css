@@ -56,12 +56,10 @@ code {
 }
 
 .heart {
-  padding: 0.5rem;
-  border: 2px solid black;
-  border-radius: 50%;
+  width: 3rem;
   margin-bottom: 10px;
 }
 
-.heart:hover {
-  background-color: pink;
+.heart:visited {
+  background-color: red;
 }

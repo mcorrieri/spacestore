@@ -18,7 +18,7 @@ function ApodCard({ apod }) {
       <img className="apod-img" src={url} alt="apod" />
       <p className="apod-desc">{explanation}</p>
       <button className="like-btn" onClick={handleToggle}>
-        {liked ? "Unlike" : "Like"}
+        {liked ? "❤️" : "♡"}
       </button>
     </div>
   );

@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react";
 import ApodCard from "../Components/ApodCard";
 
-function RoverList() {
+function ApodList() {
   const [apodList, setApodList] = useState([]);
+  const [loading, setLoading] = useState(true);
   //   https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY&start_date=2017-07-08&end_date=2017-07-10
 
   useEffect(() => {
@@ -31,4 +32,4 @@ function RoverList() {
   );
 }
 
-export default RoverList;
+export default ApodList;

@@ -60,6 +60,7 @@ code {
   display: flex;
   flex-direction: row;
   align-items: center;
+  text-decoration: underline;
 }
 
 .apod-desc {
@@ -75,6 +76,8 @@ code {
   font-weight: bold;
   font-size: large;
   margin-bottom: 20px;
+  color: black;
+  width: 60px;
 }
 
 .like-btn:hover {

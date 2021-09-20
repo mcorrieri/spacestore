@@ -1,9 +1,12 @@
 import React, { useState } from "react";
-import Heart from "react-heart";
 
 function ApodCard({ apod }) {
   const { title, date, url, explanation } = apod;
-  const [click, setClick] = useState(false);
+  const [liked, setLiked] = useState(false);
+
+  const handleToggle = () => {
+    setLiked(!liked);
+  };
 
   return (
     <div className="apod-card">
@@ -14,15 +17,7 @@ function ApodCard({ apod }) {
       </div>
       <img className="apod-img" src={url} alt="apod" />
       <p className="apod-desc">{explanation}</p>
-      <Heart
-        click={click}
-        onClick={() => setClick(!click)}
-        className="heart"
-        // animationTrigger="both"
-        // inactiveColor="rgba(255,125,125,.75)"
-        // activeColor="#e019ae"
-        // animationDuration={0.1}
-      />
+      <button onClick={handleToggle}>{liked ? "Unlike" : "Like"}</button>
     </div>
   );
 }

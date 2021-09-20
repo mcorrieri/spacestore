@@ -5,6 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: rgb(247, 243, 222);
 }
 
 code {
@@ -16,10 +17,14 @@ code {
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-color: rgb(247, 243, 222);
+  color: rgb(3, 62, 3);
+  font-family: "Trispace", sans-serif;
+  margin-bottom: 30px;
 }
 
 .logo {
-  height: 100px;
+  height: 70px;
   width: auto;
   position: absolute;
   top: 0;
@@ -31,6 +36,13 @@ code {
   flex-direction: column;
   align-items: center;
   border: 1px solid grey;
+  border-radius: 2%;
+  margin-left: 200px;
+  margin-right: 200px;
+  padding: 20px;
+  background-color: rgb(3, 70, 54);
+  color: azure;
+  margin-bottom: 40px;
 }
 
 .apod-img {
@@ -53,13 +65,31 @@ code {
 .apod-desc {
   margin-left: 5rem;
   margin-right: 5rem;
+  font-weight: 700;
 }
 
-.heart {
-  width: 3rem;
-  margin-bottom: 10px;
+.like-btn {
+  padding: 8px;
+  background-color: white;
+  border-radius: 10%;
+  font-weight: bold;
+  font-size: large;
+  margin-bottom: 20px;
 }
 
-.heart:visited {
-  background-color: red;
+.like-btn:hover {
+  background-color: rgb(177, 232, 138);
+  transition: 200ms ease-in;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgb(247, 243, 222);
+  color: rgb(3, 62, 3);
+  font-family: "Trispace", sans-serif;
+  font-weight: bold;
+  font-size: large;
+  margin-bottom: 20px;
 }

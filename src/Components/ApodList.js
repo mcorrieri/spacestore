@@ -3,8 +3,6 @@ import ApodCard from "../Components/ApodCard";
 
 function ApodList() {
   const [apodList, setApodList] = useState([]);
-  const [loading, setLoading] = useState(true);
-  //   https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY&start_date=2017-07-08&end_date=2017-07-10
 
   useEffect(() => {
     fetch(
@@ -15,7 +13,6 @@ function ApodList() {
         setApodList(data);
       });
   }, []);
-  console.log(apodList);
 
   const apoddata = apodList.map((apod) => {
     return (
@@ -27,7 +24,13 @@ function ApodList() {
 
   return (
     <div className="apod-list">
-      <div>{apoddata}</div>
+      {apoddata.length > 0 ? (
+        <div>{apoddata}</div>
+      ) : (
+        <div className="loading">
+          <h1>Loading...</h1>
+        </div>
+      )}
     </div>
   );
 }

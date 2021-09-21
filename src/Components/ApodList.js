@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from "react";
 import ApodCard from "../Components/ApodCard";
+import { API_KEY } from "./secrets";
 
 function ApodList() {
   const [apodList, setApodList] = useState([]);
 
   useEffect(() => {
     fetch(
-      "https://api.nasa.gov/planetary/apod?api_key=B3rfNGaxhBNkjTOXPWUzjmqDc8fkoYtINs8i7gBQ&start_date=2021-09-08&end_date=2021-09-15"
+      `https://api.nasa.gov/planetary/apod?${API_KEY}&start_date=2021-09-08&end_date=2021-09-15`
     )
       .then((res) => res.json())
       .then((data) => {
@@ -16,12 +17,11 @@ function ApodList() {
 
   const apoddata = apodList.map((apod) => {
     return (
-      <div>
-        <ApodCard key={apod.date} apod={apod} />
+      <div key={apod.date}>
+        <ApodCard apod={apod} />
       </div>
     );
   });
-
   return (
     <div className="apod-list">
       {apoddata.length > 0 ? (

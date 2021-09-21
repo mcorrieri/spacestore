@@ -5,7 +5,7 @@ function ApodCard({ apod }) {
   const [liked, setLiked] = useState(false);
 
   const handleToggle = () => {
-    setLiked(!liked);
+    setLiked((prev) => !prev);
   };
 
   return (

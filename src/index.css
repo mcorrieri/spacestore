@@ -51,11 +51,6 @@ code {
   border-radius: 5%;
 }
 
-/* .apod-img:hover {
-  height: 600px;
-  width: auto;
-} */
-
 .apod-info {
   display: flex;
   flex-direction: row;
